@@ -1,0 +1,17 @@
+#SERVER CONFIGURATION
+server:
+   port: ${PORT:5002}
+   servlet:
+      application-display-name: sampleEureka
+      
+#SPRING CONFIGURATION
+spring:
+   application:
+      name: sampleEureka
+   profiles:
+      active: local
+   cloud:
+      config: 
+         #http://localhost:5001/sampleEureka/local
+         uri: http://localhost:5001
+         name: sampleEureka
